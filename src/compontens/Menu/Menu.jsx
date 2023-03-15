@@ -12,7 +12,7 @@ const Menu = ({ components }) => {
   }
 
   return (
-    <div className='vh-100 flex flex-column bg-black text-white menu menu-expanded' ref={menuRef}>
+    <div className='vh-100 h-100 flex flex-column bg-black text-white menu menu-expanded' ref={menuRef}>
       <button onClick={handleExpandMenu}>
         <i className='fa-solid fa-angle-left fs-32 text-white' ref={iconRef} />
       </button>
