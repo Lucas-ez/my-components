@@ -1,24 +1,31 @@
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import './Menu.scss'
 
-const Menu = () => {
+const Menu = ({ components }) => {
   const menuRef = useRef()
   const iconRef = useRef()
 
   const handleExpandMenu = () => {
     menuRef.current.classList.toggle('menu-expanded')
-    iconRef.current.classList.toggle('fa-angle-left')
+    iconRef.current.classList.toggle('fa-angle-right')
   }
 
   return (
-    <div className='flex flex-column bg-black text-white menu' ref={menuRef}>
+    <div className='vh-100 flex flex-column bg-black text-white menu menu-expanded' ref={menuRef}>
       <button onClick={handleExpandMenu}>
-        <i class='fa-solid fa-angle-right fs-32 text-white' ref={iconRef} />
+        <i className='fa-solid fa-angle-left fs-32 text-white' ref={iconRef} />
       </button>
       <ul className='w-100'>
-        <li>primero</li>
-        <li>segundo</li>
-        <li>tercero</li>
+        {
+          components.map(element =>
+            <Link to={element.path} key={element.name}>
+              <li className='text-capitalize w-100'>
+                {element.name}
+              </li>
+            </Link>
+          )
+        }
       </ul>
     </div>
   )

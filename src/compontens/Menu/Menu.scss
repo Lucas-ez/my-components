@@ -1,11 +1,8 @@
 $animation-time: .4s;
 
 .menu {
-  position: absolute;
   align-items: flex-end;
-  height: 100vh;
   width: 3rem;
-
   transition: width $animation-time linear;
 
   button {
@@ -27,8 +24,6 @@ $animation-time: .4s;
     animation: slidein $animation-time linear;
 
     li {
-      width: 100%;
-      text-transform: capitalize;
       padding: .2rem 1rem;
 
       transition: background-color .2s linear;
