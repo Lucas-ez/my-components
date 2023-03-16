@@ -1,12 +1,12 @@
 import './App.scss'
 import { Menu } from './compontens'
 import { Routes, Route } from 'react-router-dom'
-import { RatingPage, CarrouselPage } from './pages'
+import { RatingPage, CarrouselPage, HomePage } from './pages'
 const LINKS = [
   {
     path: '/',
     name: 'home',
-    element: <h1 className='flex flex-column w-100'>HomePage</h1>
+    element: <HomePage />
   },
   {
     path: '/rating',
