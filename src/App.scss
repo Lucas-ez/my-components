@@ -147,3 +147,9 @@ input, textarea, select{
 .vh-100 {
   min-height: 100vh;
 }
+
+// page
+
+.page {
+  @extend .w-100,.flex,.flex-column;
+}

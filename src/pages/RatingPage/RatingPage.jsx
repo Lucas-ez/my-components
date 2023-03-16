@@ -15,7 +15,7 @@ const RatingPage = () => {
   }
 
   return (
-    <div className='w-100 flex flex-column rating-page'>
+    <div className='page rating-page'>
       <input
         type='text'
         value={input}

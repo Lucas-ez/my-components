@@ -10,7 +10,7 @@ const slides = [
 
 const CarrouselPage = () => {
   return (
-    <div className='w-100 flex flex-column'>
+    <div className='page'>
       <Carrousel slides={slides} />
     </div>
   )

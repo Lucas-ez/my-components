@@ -1,7 +1,7 @@
 import './App.scss'
 import { Menu } from './compontens'
 import { Routes, Route } from 'react-router-dom'
-import { RatingPage, CarrouselPage, HomePage } from './pages'
+import { RatingPage, CarrouselPage, HomePage, ButtonPage } from './pages'
 const LINKS = [
   {
     path: '/',
@@ -17,6 +17,11 @@ const LINKS = [
     path: '/carrousel',
     name: 'carrousel',
     element: <CarrouselPage />
+  },
+  {
+    path: '/button',
+    name: 'buttons',
+    element: <ButtonPage />
   }
 ]
 
