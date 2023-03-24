@@ -1,0 +1,104 @@
+.button-page {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  button {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  .type {
+    &-1 {
+      border-radius: 1rem;
+      background-color: rgb(240, 190, 128);
+      box-shadow: 0 0.4rem rgb(232, 216, 197);
+      color: white;
+
+      &:hover {
+        background: rgb(238, 174, 94);
+      }
+
+      &:active {
+        box-shadow: 0 0.2rem rgb(232, 216, 197);
+        transform: translateY(0.2rem);
+      }
+    }
+
+    &-2 {
+      background-color: transparent;
+      color: #17C3B2;
+      border: 2px solid #17C3B2;
+      transition: .2s;
+
+      &:hover {
+        background-color: #17C3B2;
+        color: white;
+      }
+      
+      &:active {
+        border-color: #15b0a1;
+        background-color: #15b0a1;
+      }
+    }
+
+    &-3 {
+      border-radius: 3rem;
+      background-color: white;
+      color: hsl(261deg 80% 48%);
+      box-shadow: hsla(261, 80%, 48%, 0.548) 0 0 8px;
+      transition: all .4s ease;
+      
+      &:hover {
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+      }
+
+      &:active {
+        background-color: hsl(261deg 80% 48%);
+        color: white;
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+      }
+    }
+
+    &-4 {
+      position: relative;
+      color: rgb(252, 70, 100);
+      border: 3px solid rgb(252, 70, 100);
+      z-index: 1;
+      overflow: hidden;
+      transition: color .3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(252, 70, 100);
+        transform: translateY(-100%);
+        transition: transform .3s;
+        z-index: -1;
+      }
+      
+      &:hover {
+        color: white;
+      }
+
+      &:hover::before {
+        transform: translateY(0);
+      }
+
+      &:active::before {
+        background-color: rgba(252, 70, 100, 0.854);
+      }
+    }
+  }
+}
